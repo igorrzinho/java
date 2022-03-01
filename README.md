@@ -148,3 +148,90 @@ int m = 60;
 * Os nomes também podem começar com $ e _ (mas não o usaremos neste tutorial)
 * Os nomes diferenciam maiúsculas de minúsculas ("myVar" e "myvar" são variáveis ​​diferentes)
 * Palavras reservadas (como palavras-chave Java, como `int` ou `boolean`) não podem ser usadas como nomes
+## tipos de dados
+Conforme explicado no capítulo anterior, uma variável em Java deve ser um tipo de dado especificado:
+```` java
+int myNum = 5;               // inteiro
+float myFloatNum = 5.99f;    // decimal
+char myLetter = 'D';         // caractere
+boolean myBool = true;       // Boolean
+String myText = "Hello";     // String
+```` 
+os tipos de dados primitivos são divididos em dois grupos
+* Tipos de dados primitivos - inclui `byte`, `short`, `int`, `long`, `float`, `double` e `boolean` `char`
+*Tipos de dados não primitivos - como String , Arrays e Classes
+
+| tipos de dados|tamanho|descrição|
+|---|---|---|
+|byte |1 byte|Armazena números inteiros de -128 a 127|
+|short |2 bytes|Armazena números inteiros de -32.768 a 32.767|
+|int |4 bytes|Armazena números inteiros de -2.147.483.648 a 2.147.483.647|
+|long |8 bytes|Armazena números inteiros de -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|
+|float |4 bytes|Armazena números fracionários. Suficiente para armazenar 6 a 7 dígitos decimais|
+|double |8 bytes|Armazena números fracionários. Suficiente para armazenar 15 dígitos decimais|
+|boolean |1 bit|Armazena valores verdadeiros ou falsos|
+|char|2 bytes|Armazena um único caractere/letra ou valores ASCII|
+### tipos inteiros
+#### byte 
+O tipo de dados `byte` pode armazenar números inteiros de -128 a 127. Isso pode ser usado em vez de `int` ou outros tipos inteiros para economizar memória quando você tiver certeza de que o valor estará entre -128 e 127:
+```` java
+byte myNum = 100;
+System.out.println(myNum);
+```` 
+#### short
+o tipo de dado `short` pode armazenar números inteiros de -32768 a 32767:
+```` java
+short myNum = 5000;
+System.out.println(myNum);
+```` 
+#### inteiro
+O tipo de dados `int` pode armazenar números inteiros de -2147483648 a 2147483647. Em geral, e em nosso tutorial, o tipo de dados `int` é o tipo de dados preferido quando criamos variáveis ​​com valor numérico.
+```` java
+int myNum = 100000;
+System.out.println(myNum);
+```` 
+#### long
+o tipo de dados `long` pode armazenar números inteiros de -9223372036854775808 a 9223372036854775807. Isso é usado quando int não é grande o suficiente para armazenar o valor. Observe que você deve terminar o valor com um "L":
+```` java
+long myNum = 15000000000L;
+System.out.println(myNum);
+```` 
+### tipo decimais
+Você deve usar um tipo de ponto flutuante sempre que precisar de um número com decimal, como 9,99 ou 3,14515.
+#### float
+o tipo de dados `float` pode armazenar números fracionários de 3.4e−038 a 3.4e+038. Observe que você deve terminar o valor com um "f":
+```` java
+float myNum = 5.75f;
+System.out.println(myNum);
+```` 
+#### double 
+o tipo de dados `double` pode armazenar números fracionários de 1.7e−308 a 1.7e+308. Observe que você deve terminar o valor com um "d":
+```` java
+double myNum = 19.99d;
+System.out.println(myNum);
+```` 
+#### Usar `float` ou `double`?
+A **precisão** de um valor com virgula indica quantos dígitos o valor pode ter após o ponto decimal. A precisão de `float` é de apenas seis ou sete dígitos decimais, enquanto `double` as variáveis ​​têm uma precisão de cerca de 15 dígitos. Portanto, é mais seguro usar `double` para a maioria dos cálculos.
+#### numeros cientificos
+Um número de com virgula também pode ser um número científico com um "e" para indicar a potência de 10:
+```` java
+float f1 = 35e3f;
+double d1 = 12E4d;
+System.out.println(f1);
+System.out.println(d1);
+````
+
+#### boolean
+o tipo de dados booleano é declarado com a palavra-chave `boolean` e só pode receber os valores `true` ou `false`:
+```` java
+boolean isJavaFun = true;
+boolean isFishTasty = false;
+System.out.println(isJavaFun);     // retorna true
+System.out.println(isFishTasty);   // retorna false
+```` 
+#### caracter
+O tipo de dados `char` é usado para armazenar um único caractere. O caractere deve estar entre aspas simples, como 'A' ou 'c':
+````java
+char myGrade = 'B';
+System.out.println(myGrade);
+```
