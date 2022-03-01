@@ -55,7 +55,7 @@ Para criar uma variável, você deve especificar o tipo e atribuir um valor a el
 ```` java
 type variableName = value;
 ```` 
- Onde type é um dos tipos de Java (como `int` ou `String), e variableName é o nome da variável (como **x** ou **name** ). O sinal de igual é usado para atribuir valores à variável.  
+ Onde type é um dos tipos de Java (como `int` ou `String`), e variableName é o nome da variável (como **x** ou **name** ). O sinal de igual é usado para atribuir valores à variável.  
  Para criar uma variável que deve armazenar texto, veja a seguir: 
  Crie uma variável chamada **name** do tipo `String` e atribua a ela o valor " igor ":
 ```` java
