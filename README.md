@@ -50,7 +50,7 @@ Em Java, existem diferentes **tipos** de variáveis, por exemplo:
 * `float` - armazena números com pontos, com decimais, como 19,99 ou -19,99
 * `char` - armazena caracteres únicos, como 'a' ou 'B'. Os valores de caractere são cercados por aspas simples
 * `boolean` - armazena valores com dois estados: verdadeiro(`true`) ou falso(`false`)
-### criando variáveis 
+## criando variáveis 
 Para criar uma variável, você deve especificar o tipo e atribuir um valor a ela:
 ```` java
 type variableName = value;
@@ -234,4 +234,21 @@ O tipo de dados `char` é usado para armazenar um único caractere. O caractere 
 ````java
 char myGrade = 'B';
 System.out.println(myGrade);
-```
+```` 
+#### string
+O tipo de dados `String` é usado para armazenar uma sequência de caracteres (texto). Os valores de string devem estar entre aspas duplas:
+```` java
+String greeting = "Hello World";
+System.out.println(greeting);
+```` 
+### tipos de dados nao primitivos
+ Tipos de dados não primitivos são chamados de tipos de referência porque se referem a objetos.
+
+ A principal diferença entre tipos de dados primitivos e não primitivos são:
+* Tipos primitivos são predefinidos (já definidos) em Java. Tipos não primitivos são criados pelo programador e não são definidos por Java (exceto para `String`).
+* Tipos não primitivos podem ser usados ​​para chamar métodos para realizar certas operações, enquanto tipos primitivos não podem.
+* Um tipo primitivo sempre tem um valor, enquanto tipos não primitivos podem ser `null`.
+* Um tipo primitivo começa com uma letra minúscula, enquanto os tipos não primitivos começam com uma letra maiúscula.
+* O tamanho de um tipo primitivo depende do tipo de dados, enquanto os tipos não primitivos têm todos o mesmo tamanho.
+
+ Exemplos de tipos não primitivos são Strings , Arrays , Classes, Interface , etc. 
