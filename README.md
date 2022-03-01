@@ -1,5 +1,5 @@
 # java
-## introdução ao java
+# introdução ao java
 em java, todo aplicativo começa com um nome de classe que deve ser o mesmo do nome do arquivo 
  criaremos um arquivo chamado Main.java
 ```` java
@@ -19,7 +19,7 @@ apos isso ele falare se existe algum erro agora é so colocar:
 java Nomedoarquivo
 ````  
 nos iremos mostrar em detalhes o codigo abaixo mais a frente o resulatado deve ser `ola me chamo igor`
-## sintaxe no java
+# sintaxe no java
  toda lina execultada no java deve SEMPRE estar dentro de um arquivo `class` no exemplo da outra aula nomeamos de **Main** uma classe deve sempre começar com a primeira letra maiuscula
  o nome do arquivo java deve ser igual ao da classe 
 ### o metodo principal 
@@ -37,10 +37,10 @@ public static void main(String[] args) {
 }
 ````
 
-## comentarios no java
+# comentarios no java
 Comentários de linha única começam com duas barras (`//`).  
  Comentários de várias linhas começam `/*` e terminam com `*/`.
-## variaveis no java
+# variaveis no java
 Variáveis ​​são contêineres para armazenar valores de dados.
 
 Em Java, existem diferentes **tipos** de variáveis, por exemplo:
@@ -148,7 +148,7 @@ int m = 60;
 * Os nomes também podem começar com $ e _ (mas não o usaremos neste tutorial)
 * Os nomes diferenciam maiúsculas de minúsculas ("myVar" e "myvar" são variáveis ​​diferentes)
 * Palavras reservadas (como palavras-chave Java, como `int` ou `boolean`) não podem ser usadas como nomes
-## tipos de dados
+# tipos de dados
 Conforme explicado no capítulo anterior, uma variável em Java deve ser um tipo de dado especificado:
 ```` java
 int myNum = 5;               // inteiro
@@ -252,3 +252,170 @@ System.out.println(greeting);
 * O tamanho de um tipo primitivo depende do tipo de dados, enquanto os tipos não primitivos têm todos o mesmo tamanho.
 
  Exemplos de tipos não primitivos são Strings , Arrays , Classes, Interface , etc. 
+## conversão de tipo
+ A conversão de tipo é quando você atribui um valor de um tipo de dados primitivo a outro tipo.
+* **Ampliação** da transmissão (feito automaticamente) - convertendo um tipo menor em um tamanho de tipo maior
+`byte`-> `short`-> `char`-> `int`-> `long`-> `float`->`double`
+* **Estreitando** (feito manualmente) - convertendo um tipo maior para um tipo de tamanho menor
+`double`-> `float`-> `long`-> `int`-> `char`-> `short`->`byte`
+
+## conversão de ampliação 
+ A conversão de ampliação é feita automaticamente ao passar um tipo de tamanho menor para um tipo de tamanho maior:
+ ```` java 
+ public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // automaticamente converte: int para double
+
+    System.out.println(myInt);      // retorna 9
+    System.out.println(myDouble);   // retorna 9.0
+  }
+}
+ ```` 
+ ## conversão de redução 
+ A redução da conversão deve ser feita manualmente, colocando o tipo entre parênteses na frente do valor:
+ ```` java 
+ public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; //: conversão manual double para int
+
+    System.out.println(myDouble);   // mostra 9.78
+    System.out.println(myInt);      // mostra 9
+  }
+}
+ ```` 
+ # operadores java
+## Operadores aritméticos
+ Operadores aritméticos são usados ​​para realizar operações matemáticas comuns.
+|operador|nome|descrição|exemplo|
+|---|---|---|---|
+|` + `|adição|Soma dois valores|x+y|
+|` - `|subtração|Subtrai um valor de outro|x-y|
+|` * `|multiplicação|Multiplica dois valores|x*y|
+|` / `|divisão|Divide um valor por outro|x/y|
+|` % `|modulo|Retorna o resto da divisão|x%y|
+|` -- `|incremento|aumenta o valor de uma variável em 1|++x|
+|` -- `|diminuir|Diminui o valor de uma variável em 1|--x|
+
+## operadores de atribuição
+ Os operadores de atribuição são usados ​​para atribuir valores a variáveis.
+
+|operador|exemplo|igual|
+|---|---|---|
+|`=`|x = 5|x = 5|
+|`+=`|x += 3|x = x + 3|
+|`-=`|x -= 3|x = x - 3|
+|`*=`|x *= 3|x = x * 3|
+|`/=`|x /= 3|x = x / 3|
+|`%=`|x %= 3|x = x % 3|
+|`&=`|x &= 3|x = x & 3|
+|`|=`|x |= 3|x = x | 3|
+|`^=`|x ^= 3|x = x ^ 3|
+|`>>=`|x >>= 3|x = x >> 3|
+|`<<=`|x <<= 3|x = x << 3|
+## operadores de comparação
+ Os operadores de comparação são usados ​​para comparar dois valores:
+|operador|nome|igual|
+|---|---|---|
+|`==`|igual a|x == y|
+|`!=`|diferente de|x != y|
+|`>`|maior que|x > y|
+|`<`|menor que|x < y|
+|`>=`|maior ou igual a|x >= y|
+|`<=`|menor ou igual a|x <= y|
+## operadores logicos 
+ Os operadores lógicos são usados ​​para determinar a lógica entre variáveis ​​ou valores:
+|operador|nome|descrição|exemplo|
+|---|---|---|---|
+|` && `|and, e|Retorna verdadeiro se ambas as declarações forem verdadeiras|x < 5 &&  x < 10|
+|` || `|or, ou|Retorna verdadeiro se uma das afirmações for verdadeira|x < 5 || x < 4|
+|` ! `|not, negação|Reverse the result, returns false if the result is true|!(x < 5 && x < 10)|
+# strings em java
+ Uma `String` variável contém uma coleção de caracteres entre aspas duplas:
+```` java
+String greeting = "Hello";
+```` 
+## comprimento de uma string
+ Uma String em Java é na verdade um objeto, que contém métodos que podem realizar certas operações em strings. Por exemplo, o comprimento de uma string pode ser encontrado com o método `length()`:
+```` java
+String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+System.out.println("The length of the txt string is: " + txt.length());
+```` 
+## mais metodos de string
+ Existem muitos métodos de string disponíveis, por exemplo `toUpperCase()` e `toLowerCase()`:
+```` java
+String txt = "Hello World";
+System.out.println(txt.toUpperCase());   // mostra "HELLO WORLD"
+System.out.println(txt.toLowerCase());   // mostra "hello world"
+```` 
+## encontrando um caractere em uma string
+ O método `indexOf()` retorna o índice (a posição) da primeira ocorrência de um texto especificado em uma string (incluindo espaços em branco):
+```` java
+String txt = "Please locate where 'locate' occurs!";
+System.out.println(txt.indexOf("locate")); // Outputs 7
+```` 
+## concatenação de string
+O operador `+` pode ser usado entre as strings para combiná-las. Isso é chamado de concatenação :
+
+```` java
+String firstName = "John";
+String lastName = "Doe";
+System.out.println(firstName + " " + lastName);
+```` 
+ Você também pode usar o método `concat()` para concatenar duas strings:
+
+```` java
+String firstName = "John ";
+String lastName = "Doe";
+System.out.println(firstName.concat(lastName));
+```` 
+## caracteres especiais
+ Como as strings devem ser escritas entre aspas, o Java interpretará mal essa string e gerará um erro:
+```` java
+String txt = "We are the so-called "Vikings" from the north.";
+```` 
+ A solução para evitar esse problema é usar o **caractere de escape de barra invertida .**  
+ O caractere de escape de barra invertida (`\`) transforma caracteres especiais em caracteres de string:
+
+|caractere ultilizado|resultado|descrição|
+|---|---|---|
+|`\'`|'|aspa unica|
+|`\"`|"|aspas dupla|
+|`\\`|\|barra invertida|
+```` java
+// A sequência \"  insere aspas duplas em uma string:
+String txt = "We are the so-called \"Vikings\" from the north.";
+// A sequência \'  insere uma aspa simples em uma string:
+String txt = "It\'s alright.";
+// A sequência \\  insere uma única barra invertida em uma string:
+String txt = "The character \\ is called backslash.";
+```` 
+# java math
+```` java
+```` 
+
+```` java
+```` 
+
+```` java
+```` 
+
+```` java
+```` 
+
+```` java
+```` 
+
+```` java
+```` 
+
+```` java
+```` 
+
+```` java
+```` 
+
+```` java
+```` 
+
