@@ -391,7 +391,168 @@ String txt = "It\'s alright.";
 // A sequência \\  insere uma única barra invertida em uma string:
 String txt = "The character \\ is called backslash.";
 ```` 
-# java math
+# java math 
+ A classe Java Math tem muitos métodos que permitem realizar tarefas matemáticas em números.
+## Math.max(x,y)
+ O método pode ser usado para encontrar o maior valor de x e y :`Math.max(x,y)`
+```` java
+Math.max(5,10);// retorna 10
+```` 
+## Math.min(x,y)
+ esse metodo é usado para encontrar o menor valor de x e y:`Math.min(x,y)`
+```` java
+Math.min(5, 10);//retorna 5
+```` 
+## Math.sqrt(x)
+ esse metodo retorna a raiz quadrada de x: `Math.sqrt(x)`
+```` java
+Math.sqrt(64);//retorna *8
+```` 
+## Math.abs(x)
+ O método retorna o valor absoluto (positivo) de x :`Math.abs(x)
+```` java
+Math.abs(-4.7);//retorna 4.7
+```` 
+## Math.random()
+ `Math.random()` retorna um número aleatório entre 0,0 (inclusive) e 1,0 (exclusivo):
+```` java
+Math.random();
+```` 
+ Para obter mais controle sobre o número aleatório, por exemplo, você deseja apenas um número aleatório entre 0 e 100, você pode usar a seguinte fórmula:
+```` java
+int randomNum = (int)(Math.random() * 101);  // 0 ate 100
+```` 
+# valores booleanos
+ os valores booleno são declarados com a palavra-chave `boolean`e so podem receber os valores `true` ou `false` 
+```` java
+boolean isJavaFun = true;
+boolean isFishTasty = false;
+System.out.println(isJavaFun);     // mostra true
+System.out.println(isFishTasty);   // mostra false
+```` 
+No entanto, é mais comum retornar valores booleanos de expressões booleanas para testes condicionais (veja abaixo).
+## expressão booleana
+ Uma expressão booleana é uma expressão Java que retorna um valor booleano: `true` ou `false`. 
+ Você pode usar um operador de comparação, como o operador maior que (`>`) para descobrir se uma expressão (ou uma variável) é verdadeira:
+```` java
+int x = 10;
+int y = 9;
+System.out.println(x > y); //retorna true, pois 10 é maior que 9
+```` 
+ ou ainda mais facil
+```` java
+System.out.println(10 > 9); // retorna true, pois 10 é maior que 9
+```` 
+ usamos o operador igual a (`==) para avaliar uma expressão:
+```` java
+int x = 10;
+System.out.println(x == 10); // retorna true, pois o valor de x é igual 10
+```` 
+
+```` java
+System.out.println(10 == 15); // retorna false, pois 10 não é igual a 15
+```` 
+# if else 
+ Java suporta as condições lógicas usuais da matemática:
+* Menor que: `a < b`
+* Menor ou igual a: `a <= b`
+* Maior que: `a > b`
+* Maior ou igual a: `a >= b`
+* igual a `a == b`
+* Diferente de:` a != b`
+Java tem as seguintes declarações condicionais:
+* Use `if` para especificar um bloco de código a ser executado, se uma condição especificada for verdadeira
+* Use `else` para especificar um bloco de código a ser executado, se a mesma condição for falsa
+* Use `else if` para especificar uma nova condição a ser testada, se a primeira condição for falsa
+* Use `switch` para especificar muitos blocos alternativos de código a serem executados
+ ## declaração if
+   Use a `if` instrução para especificar um bloco de código Java a ser executado se uma condição for `true.
+```` java
+if (condition) {
+  // sera executado se a condition for true
+}
+```` 
+ No exemplo abaixo, testamos dois valores para descobrir se 20 é maior que 18. Se a condição for `true, imprima algum texto:
+```` java
+if (20 > 18) {
+  System.out.println("20 é maior que 18");
+}
+```` 
+ tambem podemos usar variaveis:
+```` java
+int x = 20;
+int y = 18;
+if (x > y) {
+  System.out.println("x é maior que y");
+}
+```` 
+ No exemplo acima usamos duas variáveis, x e y , para testar se x é maior que y (usando o operador `>`). Como x é 20 e y é 18, e sabemos que 20 é maior que 18, imprimimos na tela que "x é maior que y".
+ ## declaração else 
+ Use a instrução `else` para especificar um bloco de código a ser executado se a condição for `false.
+```` java
+if (condition) {
+  // sera executado se a condição for true
+} else {
+  // sera executado se a condição for false
+}
+```` 
+
+```` java
+int time = 20;
+if (time < 18) {
+  System.out.println("bom dia.");
+} else {
+  System.out.println("boa noite.");
+}
+// retorna "boa noite."
+```` 
+No exemplo acima, o tempo (20) é maior que 18, então a condição é `false`. Por conta disso, passamos para a `else` condição e imprimimos na tela "Boa noite". Se a hora fosse menor que 18, o programa imprimiria "Bom dia".
+## else if 
+```` java
+if (condition1) {
+  // sera executado se  condition1 é true
+} else if (condition2) {
+  //sera executado se condition1 for false e a  condition2 for true
+} else {
+  // sera executado se condition1 for false e condition2 for false
+}
+```` 
+
+```` java
+int time = 22;
+if (time < 10) {
+  System.out.println("bom dia.");
+} else if (time < 20) {
+  System.out.println("boa tarde.");
+} else {
+  System.out.println("boa noite.");
+}
+// retorna "boa noite."
+```` 
+No exemplo acima, o tempo (22) é maior que 10, então a primeira condição é `false`. A próxima condição, na instrução `else if`, também é `false`, então passamos para a `else` condição já que a condição1 e a condição2 são `false` e imprimimos na tela "Boa noite".
+
+No entanto, se a hora fosse 14, nosso programa imprimiria "boa tarde".
+# operador ternário
+ Há também uma abreviação if else, que é conhecida como **operador ternário** porque consiste em três operandos. Ele pode ser usado para substituir várias linhas de código por uma única linha. É frequentemente usado para substituir instruções if else simples:
+```` java
+variable = (condition) ? se for true : se for false;
+```` 
+ em vez de escrevermos :
+```` java
+int time = 20;
+if (time < 18) {
+  System.out.println("bom dia.");
+} else {
+  System.out.println("boa noite.");
+}
+```` 
+ podemos escrever apenas
+```` java
+int time = 20;
+String result = (time < 18) ? "bom dia." : "boa noite.";
+System.out.println(result);
+```` 
+# comutador java
 ```` java
 ```` 
 
@@ -409,13 +570,3 @@ String txt = "The character \\ is called backslash.";
 
 ```` java
 ```` 
-
-```` java
-```` 
-
-```` java
-```` 
-
-```` java
-```` 
-
