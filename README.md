@@ -1,6 +1,6 @@
 # java
 # introdução ao java
-em java, todo aplicativo começa com um nome de classe que deve ser o mesmo do nome do arquivo 
+em java, todo aplicativo começa com um nome de classe que deve ser o mesmo do nome do arquivo
  criaremos um arquivo chamado Main.java
 ```` java
 public class Main {
@@ -13,7 +13,7 @@ public class Main {
 para execultar o codigo acima devemos ir ate o arquivo no terminal e colocar:
 ```` sh
 javac nomedoarquivo.java
-```` 
+````
 apos isso ele falare se existe algum erro agora é so colocar:
 ```` sh
 java Nomedoarquivo
@@ -21,17 +21,17 @@ java Nomedoarquivo
 nos iremos mostrar em detalhes o codigo abaixo mais a frente o resulatado deve ser `ola me chamo igor`
 # sintaxe no java
  toda lina execultada no java deve SEMPRE estar dentro de um arquivo `class` no exemplo da outra aula nomeamos de **Main** uma classe deve sempre começar com a primeira letra maiuscula
- o nome do arquivo java deve ser igual ao da classe 
-### o metodo principal 
+ o nome do arquivo java deve ser igual ao da classe
+### o metodo principal
 o `main()` método é necessário e você vera em todos os programas java
 ```` java
 public static void main(String[] args)
-```` 
+````
 qualquer codigo dentro do `main()` sera executado. agora voce nao precisa saber as palavras-chaves depois de main.conhecera pouco a pouco  
  Por enquanto, apenas lembre-se de que todo programa Java tem um `classnome` que deve corresponder ao nome do arquivo e que todo programa deve conter o método `main()`.
 ### System.out.println()
 Dentro do método `main()`, podemos usar o método `println()` para imprimir uma linha de texto na tela:
-```` java 
+```` java
 public static void main(String[] args) {
   System.out.println("Hello World");
 }
@@ -50,37 +50,37 @@ Em Java, existem diferentes **tipos** de variáveis, por exemplo:
 * `float` - armazena números com pontos, com decimais, como 19,99 ou -19,99
 * `char` - armazena caracteres únicos, como 'a' ou 'B'. Os valores de caractere são cercados por aspas simples
 * `boolean` - armazena valores com dois estados: verdadeiro(`true`) ou falso(`false`)
-## criando variáveis 
+## criando variáveis
 Para criar uma variável, você deve especificar o tipo e atribuir um valor a ela:
 ```` java
 type variableName = value;
-```` 
+````
  Onde type é um dos tipos de Java (como `int` ou `String`), e variableName é o nome da variável (como **x** ou **name** ). O sinal de igual é usado para atribuir valores à variável.  
- Para criar uma variável que deve armazenar texto, veja a seguir: 
+ Para criar uma variável que deve armazenar texto, veja a seguir:
  Crie uma variável chamada **name** do tipo `String` e atribua a ela o valor " igor ":
 ```` java
 String name = "igor";
 System.out.println(name);
 ````
 
- Para criar uma variável que deve armazenar numero inteiro, veja a seguir: 
+ Para criar uma variável que deve armazenar numero inteiro, veja a seguir:
  Crie uma variável chamada **myNum** do tipo `int` e atribua a ela o valor **15**:
 ```` java
 int myNum = 15;
 System.out.println(myNum);
-```` 
+````
  para declarar uma variável sem atribuir o valor e atribuir o valor posteriormente:
 ```` java
 int myNum;
 myNum = 15;
 System.out.println(myNum);
-```` 
+````
 Altere o valor de `myNum` de `15` para `20`:
-```` java 
+```` java
 int myNum = 15;
 myNum = 20;  // myNum agora é 20
 System.out.println(myNum);
-```` 
+````
 #### variaveis finais
 No entanto, você pode adicionar a palavra-chave `fiunal` se não quiser que outros (ou você mesmo) substituam os valores existentes (isso declarará a variável como "final" ou "constante", o que significa imutável e somente leitura):
 ```` java
@@ -96,27 +96,27 @@ float myFloatNum = 5.99f;
 char myLetter = 'D';
 boolean myBool = true;
 String myText = "Hello";
-```` 
+````
 #### variaveis de exibição
  O metodo `println()` é frequentemente usado para exibir variáveis.  
  Para combinar texto e uma variável, use o `+` caractere:
 ```` java
 String name = "John";
 System.out.println("Hello " + name);
-```` 
+````
 também podemos usar o ` + ` para adicionar uma variável a outra variável:
 ```` java
 String firstName = " Igor ";
 String lastName = "Silva";
 String fullName = firstName + lastName;
 System.out.println(fullName);
-```` 
+````
 Para valores numéricos, o ` + ` caractere funciona como um operador matemático (observe que usamos `int` variáveis ​​(inteiro) aqui):
 ```` java
 int x = 5;
 int y = 6;
 System.out.println(x + y); // mostra o resultado da soma de x + y
-```` 
+````
 A partir do exemplo acima, você pode esperar:
 
 * x armazena o valor 5
@@ -124,10 +124,10 @@ A partir do exemplo acima, você pode esperar:
 Em seguida, usamos o método `println()` para exibir o valor de x + y, que é 11
 #### declarar muitas variáveis
 para declarar mais de uma variavel do **mesmo tipo** use uma lista separada por virgulas:
-```` java 
+```` java
 int x = 5, y = 6, z = 50;
 System.out.println(x + y + z);
-```` 
+````
 #### identificadores java
  Todas as variáveis ​​Java devem ser identificadas com nomes exclusivos .  
 
@@ -141,7 +141,7 @@ int minutesPerHour = 60;
 
 // OK, mas não é tão fácil entender o que m realmente é
 int m = 60;
-```` 
+````
 * Os nomes podem conter letras, dígitos, sublinhados e cifrões
 * Os nomes devem começar com uma letra
 * Os nomes devem começar com uma letra minúscula e não podem conter espaços em branco
@@ -156,7 +156,7 @@ float myFloatNum = 5.99f;    // decimal
 char myLetter = 'D';         // caractere
 boolean myBool = true;       // Boolean
 String myText = "Hello";     // String
-```` 
+````
 os tipos de dados primitivos são divididos em dois grupos
 * Tipos de dados primitivos - inclui `byte`, `short`, `int`, `long`, `float`, `double` e `boolean` `char`
 *Tipos de dados não primitivos - como String , Arrays e Classes
@@ -172,30 +172,30 @@ os tipos de dados primitivos são divididos em dois grupos
 |boolean |1 bit|Armazena valores verdadeiros ou falsos|
 |char|2 bytes|Armazena um único caractere/letra ou valores ASCII|
 ### tipos inteiros
-#### byte 
+#### byte
 O tipo de dados `byte` pode armazenar números inteiros de -128 a 127. Isso pode ser usado em vez de `int` ou outros tipos inteiros para economizar memória quando você tiver certeza de que o valor estará entre -128 e 127:
 ```` java
 byte myNum = 100;
 System.out.println(myNum);
-```` 
+````
 #### short
 o tipo de dado `short` pode armazenar números inteiros de -32768 a 32767:
 ```` java
 short myNum = 5000;
 System.out.println(myNum);
-```` 
+````
 #### inteiro
 O tipo de dados `int` pode armazenar números inteiros de -2147483648 a 2147483647. Em geral, e em nosso tutorial, o tipo de dados `int` é o tipo de dados preferido quando criamos variáveis ​​com valor numérico.
 ```` java
 int myNum = 100000;
 System.out.println(myNum);
-```` 
+````
 #### long
 o tipo de dados `long` pode armazenar números inteiros de -9223372036854775808 a 9223372036854775807. Isso é usado quando int não é grande o suficiente para armazenar o valor. Observe que você deve terminar o valor com um "L":
 ```` java
 long myNum = 15000000000L;
 System.out.println(myNum);
-```` 
+````
 ### tipo decimais
 Você deve usar um tipo de ponto flutuante sempre que precisar de um número com decimal, como 9,99 ou 3,14515.
 #### float
@@ -203,13 +203,13 @@ o tipo de dados `float` pode armazenar números fracionários de 3.4e−038 a 3.
 ```` java
 float myNum = 5.75f;
 System.out.println(myNum);
-```` 
-#### double 
+````
+#### double
 o tipo de dados `double` pode armazenar números fracionários de 1.7e−308 a 1.7e+308. Observe que você deve terminar o valor com um "d":
 ```` java
 double myNum = 19.99d;
 System.out.println(myNum);
-```` 
+````
 #### Usar `float` ou `double`?
 A **precisão** de um valor com virgula indica quantos dígitos o valor pode ter após o ponto decimal. A precisão de `float` é de apenas seis ou sete dígitos decimais, enquanto `double` as variáveis ​​têm uma precisão de cerca de 15 dígitos. Portanto, é mais seguro usar `double` para a maioria dos cálculos.
 #### numeros cientificos
@@ -228,19 +228,19 @@ boolean isJavaFun = true;
 boolean isFishTasty = false;
 System.out.println(isJavaFun);     // retorna true
 System.out.println(isFishTasty);   // retorna false
-```` 
+````
 #### caracter
 O tipo de dados `char` é usado para armazenar um único caractere. O caractere deve estar entre aspas simples, como 'A' ou 'c':
 ````java
 char myGrade = 'B';
 System.out.println(myGrade);
-```` 
+````
 #### string
 O tipo de dados `String` é usado para armazenar uma sequência de caracteres (texto). Os valores de string devem estar entre aspas duplas:
 ```` java
 String greeting = "Hello World";
 System.out.println(greeting);
-```` 
+````
 ### tipos de dados nao primitivos
  Tipos de dados não primitivos são chamados de tipos de referência porque se referem a objetos.
 
@@ -251,7 +251,7 @@ System.out.println(greeting);
 * Um tipo primitivo começa com uma letra minúscula, enquanto os tipos não primitivos começam com uma letra maiúscula.
 * O tamanho de um tipo primitivo depende do tipo de dados, enquanto os tipos não primitivos têm todos o mesmo tamanho.
 
- Exemplos de tipos não primitivos são Strings , Arrays , Classes, Interface , etc. 
+ Exemplos de tipos não primitivos são Strings , Arrays , Classes, Interface , etc.
 ## conversão de tipo
  A conversão de tipo é quando você atribui um valor de um tipo de dados primitivo a outro tipo.
 * **Ampliação** da transmissão (feito automaticamente) - convertendo um tipo menor em um tamanho de tipo maior
@@ -259,9 +259,9 @@ System.out.println(greeting);
 * **Estreitando** (feito manualmente) - convertendo um tipo maior para um tipo de tamanho menor
 `double`-> `float`-> `long`-> `int`-> `char`-> `short`->`byte`
 
-## conversão de ampliação 
+## conversão de ampliação
  A conversão de ampliação é feita automaticamente ao passar um tipo de tamanho menor para um tipo de tamanho maior:
- ```` java 
+ ```` java
  public class Main {
   public static void main(String[] args) {
     int myInt = 9;
@@ -271,10 +271,10 @@ System.out.println(greeting);
     System.out.println(myDouble);   // retorna 9.0
   }
 }
- ```` 
- ## conversão de redução 
+ ````
+ ## conversão de redução
  A redução da conversão deve ser feita manualmente, colocando o tipo entre parênteses na frente do valor:
- ```` java 
+ ```` java
  public class Main {
   public static void main(String[] args) {
     double myDouble = 9.78d;
@@ -284,7 +284,7 @@ System.out.println(greeting);
     System.out.println(myInt);      // mostra 9
   }
 }
- ```` 
+ ````
  # operadores java
 ## Operadores aritméticos
  Operadores aritméticos são usados ​​para realizar operações matemáticas comuns.
@@ -324,7 +324,7 @@ System.out.println(greeting);
 |`<`|menor que|x < y|
 |`>=`|maior ou igual a|x >= y|
 |`<=`|menor ou igual a|x <= y|
-## operadores logicos 
+## operadores logicos
  Os operadores lógicos são usados ​​para determinar a lógica entre variáveis ​​ou valores:
 |operador|nome|descrição|exemplo|
 |---|---|---|---|
@@ -335,26 +335,26 @@ System.out.println(greeting);
  Uma `String` variável contém uma coleção de caracteres entre aspas duplas:
 ```` java
 String greeting = "Hello";
-```` 
+````
 ## comprimento de uma string
  Uma String em Java é na verdade um objeto, que contém métodos que podem realizar certas operações em strings. Por exemplo, o comprimento de uma string pode ser encontrado com o método `length()`:
 ```` java
 String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 System.out.println("The length of the txt string is: " + txt.length());
-```` 
+````
 ## mais metodos de string
  Existem muitos métodos de string disponíveis, por exemplo `toUpperCase()` e `toLowerCase()`:
 ```` java
 String txt = "Hello World";
 System.out.println(txt.toUpperCase());   // mostra "HELLO WORLD"
 System.out.println(txt.toLowerCase());   // mostra "hello world"
-```` 
+````
 ## encontrando um caractere em uma string
  O método `indexOf()` retorna o índice (a posição) da primeira ocorrência de um texto especificado em uma string (incluindo espaços em branco):
 ```` java
 String txt = "Please locate where 'locate' occurs!";
 System.out.println(txt.indexOf("locate")); // Outputs 7
-```` 
+````
 ## concatenação de string
 O operador `+` pode ser usado entre as strings para combiná-las. Isso é chamado de concatenação :
 
@@ -362,19 +362,19 @@ O operador `+` pode ser usado entre as strings para combiná-las. Isso é chamad
 String firstName = "John";
 String lastName = "Doe";
 System.out.println(firstName + " " + lastName);
-```` 
+````
  Você também pode usar o método `concat()` para concatenar duas strings:
 
 ```` java
 String firstName = "John ";
 String lastName = "Doe";
 System.out.println(firstName.concat(lastName));
-```` 
+````
 ## caracteres especiais
  Como as strings devem ser escritas entre aspas, o Java interpretará mal essa string e gerará um erro:
 ```` java
 String txt = "We are the so-called "Vikings" from the north.";
-```` 
+````
  A solução para evitar esse problema é usar o **caractere de escape de barra invertida .**  
  O caractere de escape de barra invertida (`\`) transforma caracteres especiais em caracteres de string:
 
@@ -390,69 +390,69 @@ String txt = "We are the so-called \"Vikings\" from the north.";
 String txt = "It\'s alright.";
 // A sequência \\  insere uma única barra invertida em uma string:
 String txt = "The character \\ is called backslash.";
-```` 
-# java math 
+````
+# java math
  A classe Java Math tem muitos métodos que permitem realizar tarefas matemáticas em números.
 ## Math.max(x,y)
  O método pode ser usado para encontrar o maior valor de x e y :`Math.max(x,y)`
 ```` java
 Math.max(5,10);// retorna 10
-```` 
+````
 ## Math.min(x,y)
  esse metodo é usado para encontrar o menor valor de x e y:`Math.min(x,y)`
 ```` java
 Math.min(5, 10);//retorna 5
-```` 
+````
 ## Math.sqrt(x)
  esse metodo retorna a raiz quadrada de x: `Math.sqrt(x)`
 ```` java
 Math.sqrt(64);//retorna *8
-```` 
+````
 ## Math.abs(x)
  O método retorna o valor absoluto (positivo) de x :`Math.abs(x)
 ```` java
 Math.abs(-4.7);//retorna 4.7
-```` 
+````
 ## Math.random()
  `Math.random()` retorna um número aleatório entre 0,0 (inclusive) e 1,0 (exclusivo):
 ```` java
 Math.random();
-```` 
+````
  Para obter mais controle sobre o número aleatório, por exemplo, você deseja apenas um número aleatório entre 0 e 100, você pode usar a seguinte fórmula:
 ```` java
 int randomNum = (int)(Math.random() * 101);  // 0 ate 100
-```` 
+````
 # valores booleanos
- os valores booleno são declarados com a palavra-chave `boolean`e so podem receber os valores `true` ou `false` 
+ os valores booleno são declarados com a palavra-chave `boolean`e so podem receber os valores `true` ou `false`
 ```` java
 boolean isJavaFun = true;
 boolean isFishTasty = false;
 System.out.println(isJavaFun);     // mostra true
 System.out.println(isFishTasty);   // mostra false
-```` 
+````
 No entanto, é mais comum retornar valores booleanos de expressões booleanas para testes condicionais (veja abaixo).
 ## expressão booleana
- Uma expressão booleana é uma expressão Java que retorna um valor booleano: `true` ou `false`. 
+ Uma expressão booleana é uma expressão Java que retorna um valor booleano: `true` ou `false`.
  Você pode usar um operador de comparação, como o operador maior que (`>`) para descobrir se uma expressão (ou uma variável) é verdadeira:
 ```` java
 int x = 10;
 int y = 9;
 System.out.println(x > y); //retorna true, pois 10 é maior que 9
-```` 
+````
  ou ainda mais facil
 ```` java
 System.out.println(10 > 9); // retorna true, pois 10 é maior que 9
-```` 
+````
  usamos o operador igual a (`==) para avaliar uma expressão:
 ```` java
 int x = 10;
 System.out.println(x == 10); // retorna true, pois o valor de x é igual 10
-```` 
+````
 
 ```` java
 System.out.println(10 == 15); // retorna false, pois 10 não é igual a 15
-```` 
-# if else 
+````
+# if else
  Java suporta as condições lógicas usuais da matemática:
 * Menor que: `a < b`
 * Menor ou igual a: `a <= b`
@@ -471,13 +471,13 @@ Java tem as seguintes declarações condicionais:
 if (condition) {
   // sera executado se a condition for true
 }
-```` 
+````
  No exemplo abaixo, testamos dois valores para descobrir se 20 é maior que 18. Se a condição for `true, imprima algum texto:
 ```` java
 if (20 > 18) {
   System.out.println("20 é maior que 18");
 }
-```` 
+````
  tambem podemos usar variaveis:
 ```` java
 int x = 20;
@@ -485,9 +485,9 @@ int y = 18;
 if (x > y) {
   System.out.println("x é maior que y");
 }
-```` 
+````
  No exemplo acima usamos duas variáveis, x e y , para testar se x é maior que y (usando o operador `>`). Como x é 20 e y é 18, e sabemos que 20 é maior que 18, imprimimos na tela que "x é maior que y".
- ## declaração else 
+ ## declaração else
  Use a instrução `else` para especificar um bloco de código a ser executado se a condição for `false.
 ```` java
 if (condition) {
@@ -495,7 +495,7 @@ if (condition) {
 } else {
   // sera executado se a condição for false
 }
-```` 
+````
 
 ```` java
 int time = 20;
@@ -505,9 +505,9 @@ if (time < 18) {
   System.out.println("boa noite.");
 }
 // retorna "boa noite."
-```` 
+````
 No exemplo acima, o tempo (20) é maior que 18, então a condição é `false`. Por conta disso, passamos para a `else` condição e imprimimos na tela "Boa noite". Se a hora fosse menor que 18, o programa imprimiria "Bom dia".
-## else if 
+## else if
 ```` java
 if (condition1) {
   // sera executado se  condition1 é true
@@ -516,7 +516,7 @@ if (condition1) {
 } else {
   // sera executado se condition1 for false e condition2 for false
 }
-```` 
+````
 
 ```` java
 int time = 22;
@@ -528,7 +528,7 @@ if (time < 10) {
   System.out.println("boa noite.");
 }
 // retorna "boa noite."
-```` 
+````
 No exemplo acima, o tempo (22) é maior que 10, então a primeira condição é `false`. A próxima condição, na instrução `else if`, também é `false`, então passamos para a `else` condição já que a condição1 e a condição2 são `false` e imprimimos na tela "Boa noite".
 
 No entanto, se a hora fosse 14, nosso programa imprimiria "boa tarde".
@@ -536,7 +536,7 @@ No entanto, se a hora fosse 14, nosso programa imprimiria "boa tarde".
  Há também uma abreviação if else, que é conhecida como **operador ternário** porque consiste em três operandos. Ele pode ser usado para substituir várias linhas de código por uma única linha. É frequentemente usado para substituir instruções if else simples:
 ```` java
 variable = (condition) ? se for true : se for false;
-```` 
+````
  em vez de escrevermos :
 ```` java
 int time = 20;
@@ -545,28 +545,201 @@ if (time < 18) {
 } else {
   System.out.println("boa noite.");
 }
-```` 
+````
  podemos escrever apenas
 ```` java
 int time = 20;
 String result = (time < 18) ? "bom dia." : "boa noite.";
 System.out.println(result);
-```` 
-# comutador java
+````
+# case java
+ Use a instrução `switch` para selecionar um dos muitos blocos de código a serem executados.
 ```` java
-```` 
+switch(expression) {
+  case x:
+    // codigor a ser execultado
+    break;
+  case y:
+  // codigor a ser execultado
+    break;
+  default:
+  // codigor a ser execultado
+}
+````
+ o case funciona assim:
+* a expressão `switch` é avaliada uma vez
+* O valor da expressão é comparado com os valores de cada case
+* Se houver uma correspondência, o bloco de código associado será executado.
+* As palavras-chave `break` e `default`são opcionais e serão descritas posteriormente
+
+ O exemplo abaixo usa o número do dia da semana para calcular o nome do dia da semana:
+```` java
+int day = 4;
+switch (day) {
+  case 1:
+    System.out.println("segunda");
+    break;
+  case 2:
+    System.out.println("terça");
+    break;
+  case 3:
+    System.out.println("quarta");
+    break;
+  case 4:
+    System.out.println("quinta");
+    break;
+  case 5:
+    System.out.println("sexta");
+    break;
+  case 6:
+    System.out.println("sabado");
+    break;
+  case 7:
+    System.out.println("domingo");
+    break;
+}
+// mostra "quinta" (dia 4)
+````
+## palavra chave `break`
+
+ Quando o Java atinge uma palavra-chave `break`, ele sai do bloco `switch`.
+
+ Isso interromperá a execução de mais código e teste de caso dentro do bloco.
+
+ Quando uma correspondência é encontrada e o trabalho está concluído, é hora de uma pausa. Não há necessidade de mais testes.
+## palavra chave `default`
+ A palavra-chave `default` especifica algum código a ser executado se não houver correspondência entre maiúsculas e minúsculas:
+```` java
+int day = 4;
+switch (day) {
+  case 6:
+    System.out.println("hoje é sabado");
+    break;
+  case 7:
+    System.out.println("hoje é domingo");
+    break;
+  default:
+    System.out.println("hoje é outro dia da semana");
+}
+// mostra "hoje é outro dia da semana"
+````
+# loops em java
+ Os loops podem executar um bloco de código desde que uma condição especificada seja alcançada.
+
+ Os loops são úteis porque economizam tempo, reduzem erros e tornam o código mais legível.
+
+## while
+ O loop `while` percorre um bloco de código desde que uma condição especificada seja `true`.
+```` java
+while (condition) {
+  // codigo para ser execultado
+}
+````
+ No exemplo abaixo, o código no loop será executado repetidamente, desde que uma variável (i) seja menor que 5:
 
 ```` java
-```` 
+int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}
+````
+## do/while
+O loop `do/while`é uma variante do loop`while`. Este loop executará o bloco de código uma vez, antes de verificar se a condição é verdadeira, então repetirá o loop enquanto a condição for verdadeira.
 
 ```` java
-```` 
+do {
+  // codigo para ser execultado
+}
+while (condition);
+````
+O exemplo abaixo usa um loop `do/while`. O loop sempre será executado pelo menos uma vez, mesmo que a condição seja falsa, pois o bloco de código é executado antes que a condição seja testada:
+```` java
+int i = 0;
+do {
+  System.out.println(i);
+  i++;
+}
+while (i < 5);
+````
+## loop for
+ Quando você souber exatamente quantas vezes deseja percorrer um bloco de código, use o loop `for` em vez de um loop `while`:
+```` java
+for (statement 1; statement 2; statement 3) {
+  // codigo para ser execultado
+}
+````
+ **A instrução 1** é executada (uma vez) antes da execução do bloco de código.
+ **A instrução 2** define a condição para executar o bloco de código.
+
+ **A instrução 3** é executada (todas as vezes) após a execução do bloco de código.
+
+ O exemplo abaixo imprimirá os números de 0 a 4:
 
 ```` java
-```` 
+or (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+````
+### Exemplo explicado
+ A instrução 1 define uma variável antes do início do loop (int i = 0).
+
+ A instrução 2 define a condição para a execução do loop (i deve ser menor que 5). Se a condição for verdadeira, o loop começará novamente, se for falso, o loop terminará.
+
+ A instrução 3 aumenta um valor (i++) cada vez que o bloco de código no loop é executado.
+### exemplo 2
+ Este exemplo imprimirá apenas valores pares entre 0 e 10:
+```` java
+for (int i = 0; i <= 10; i = i + 2) {
+  System.out.println(i);
+}
+````
+## loop for-Each
+ Há também um loop **" for-each ", que é usado exclusivamente para percorrer elementos em um array**:
+```` java
+for (type variableName : arrayName) {
+  // codigo de bloco a ser execultado
+}
+````
+O exemplo a seguir gera todos os elementos no array cars , usando um loop " for-each ":
 
 ```` java
-```` 
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+````
 
 ```` java
-```` 
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+# java
