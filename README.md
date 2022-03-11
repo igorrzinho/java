@@ -710,6 +710,168 @@ for (String i : cars) {
 }
 ````
 
+# Java Break and Continue
+## java Break
+ Você já viu a instrução `break` usada em um capítulo anterior deste tutorial. Foi usado para "saltar" de uma declaração `switch`.
+
+ a instrução `break` também pode ser usada para sair de um **loop**.
+
+ Este exemplo interrompe o loop quando i é igual a 4:
+```` java
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    break;
+  }
+  System.out.println(i);
+}
+````
+## Java Continue
+ A instrução `continue` interrompe uma iteração (no loop), se ocorrer uma condição especificada, e continua com a próxima iteração no loop.
+
+ Este exemplo não mostra o valor de 4:
+```` java
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    continue;
+  }
+  System.out.println(i);
+}
+````
+## Interromper e continuar no loop while
+
+Você também pode usar `break`e `continue` em loops while:
+
+ continue Break
+```` java
+int i = 0;
+while (i < 10) {
+  System.out.println(i);
+  i++;
+  if (i == 4) {
+    break;
+  }
+}
+````
+
+ continue exemplo
+```` java
+int i = 0;
+while (i < 10) {
+  if (i == 4) {
+    i++;
+    continue;
+  }
+  System.out.println(i);
+  i++;
+}
+````
+# java arrays
+Arrays são usados ​​para armazenar vários valores em uma única variável, em vez de declarar variáveis ​​separadas para cada valor.
+
+Para declarar um array, defina o tipo de variável com **colchetes** :
+```` java
+String[] cars;
+````
+
+ Agora declaramos uma variável que contém um array de strings. Para inserir valores nele, podemos usar um literal de array - coloque os valores em uma lista separada por vírgulas, entre chaves:
+```` java
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+````
+ Para criar um array de inteiros, você poderia escrever:
+```` java
+int[] myNum = {10, 20, 30, 40};
+````
+## Acesse os elementos de um array
+ Você acessa um elemento da matriz referindo-se ao número do índice.
+ Esta instrução acessa o valor do primeiro elemento em cars:
+```` java
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars[0]);
+// mostra Volvo
+````
+## Alterar um elemento de matriz
+Para alterar o valor de um elemento específico, consulte o número do índice:
+
+```` java
+cars[0] = "Opel";
+````
+
+```` java
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+cars[0] = "Opel";
+System.out.println(cars[0]);
+// agora mostra Opel no lugar de  Volvo
+````
+## comprimento de uma matriz
+Para descobrir quantos elementos um array possui, use a propriedade `length`:
+```` java
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars.length);
+// mostra 4
+````
+## Loop através de uma matriz
+ Você pode percorrer os elementos da matriz com o loop `for` e usar a propriedade `length` para especificar quantas vezes o loop deve ser executado.
+
+ O exemplo a seguir gera todos os elementos na matriz cars :
+```` java
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (int i = 0; i < cars.length; i++) {
+  System.out.println(cars[i]);
+}
+````
+
+## Loop através de uma matriz com For-Each
+ Há também um loop "**for-each ", que é usado exclusivamente para percorrer elementos em arrays**:
+
+  sintaxe
+```` java
+for (type variable : arrayname) {
+  ...
+}
+````
+ O exemplo a seguir gera todos os elementos no array cars , usando um loop " for-each ":
+
+```` java
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+````
+  O exemplo acima pode ser lido assim: para cada elemento `String` (chamado i - como em index ) em cars , imprima o valor de i .
+
+ Se você comparar o loop `for` com o loop `for-each` , verá que o método `for-each` é mais fácil de escrever, não requer um contador (usando a propriedade length) e é mais legível.
+
+# objetos em java
+ Um array multidimensional é um array de arrays.
+Para criar um array bidimensional, adicione cada array dentro de seu próprio conjunto de chaves :
+```` java
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+````
+ myNumbers agora é um array com dois arrays como seus elementos.
+
+ Para acessar os elementos da matriz **myNumbers** , especifique dois índices: um para a matriz e outro para o elemento dentro dessa matriz. Este exemplo acessa o terceiro elemento (2) no segundo array (1) de myNumbers:
+
+```` java
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+int x = myNumbers[1][2];
+System.out.println(x); // mostra 7
+````
+ Também podemos usar um for loopdentro de outro for looppara obter os elementos de um array bidimensional (ainda temos que apontar para os dois índices):
+
+```` java
+public class Main {
+  public static void main(String[] args) {
+    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    for (int i = 0; i < myNumbers.length; ++i) {
+      for(int j = 0; j < myNumbers[i].length; ++j) {
+        System.out.println(myNumbers[i][j]);
+      }
+    }
+  }
+}
+````
+
+## metodos em java
 ```` java
 ````
 
@@ -742,4 +904,146 @@ for (String i : cars) {
 
 ```` java
 ````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
+```` java
+````
+
 # java
