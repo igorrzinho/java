@@ -14,11 +14,11 @@ para execultar o codigo acima devemos ir ate o arquivo no terminal e colocar:
 ```` sh
 javac nomedoarquivo.java
 ````
-apos isso ele falare se existe algum erro agora é so colocar:
+apos isso ele falara se existe algum erro agora é so colocar:
 ```` sh
 java Nomedoarquivo
 ````  
-nos iremos mostrar em detalhes o codigo abaixo mais a frente o resulatado deve ser `ola me chamo igor`
+o resulatado deve ser `ola me chamo igor`
 # sintaxe no java
  toda lina execultada no java deve SEMPRE estar dentro de um arquivo `class` no exemplo da outra aula nomeamos de **Main** uma classe deve sempre começar com a primeira letra maiuscula
  o nome do arquivo java deve ser igual ao da classe
@@ -27,8 +27,7 @@ o `main()` método é necessário e você vera em todos os programas java
 ```` java
 public static void main(String[] args)
 ````
-qualquer codigo dentro do `main()` sera executado. agora voce nao precisa saber as palavras-chaves depois de main.conhecera pouco a pouco  
- Por enquanto, apenas lembre-se de que todo programa Java tem um `classnome` que deve corresponder ao nome do arquivo e que todo programa deve conter o método `main()`.
+ qualquer codigo dentro do `main()` sera executado.lembre-se de que todo programa Java tem um `classnome` que deve corresponder ao nome do arquivo e que todo programa deve conter o método `main()`.
 ### System.out.println()
 Dentro do método `main()`, podemos usar o método `println()` para imprimir uma linha de texto na tela:
 ```` java
@@ -38,12 +37,12 @@ public static void main(String[] args) {
 ````
 
 # comentarios no java
-Comentários de linha única começam com duas barras (`//`).  
+ Comentários de linha única começam com duas barras (`//`).  
  Comentários de várias linhas começam `/*` e terminam com `*/`.
 # variaveis no java
-Variáveis ​​são contêineres para armazenar valores de dados.
+ Variáveis ​​são usadas para armazenar valores de dados.
 
-Em Java, existem diferentes **tipos** de variáveis, por exemplo:
+ Em Java, existem diferentes **tipos** de variáveis, por exemplo:
 
 * `String` - armazena texto, como "Olá". Os valores de string são cercados por aspas duplas
 * `int` - armazena inteiros (números inteiros), sem decimais, como 123 ou -123
@@ -56,14 +55,14 @@ Para criar uma variável, você deve especificar o tipo e atribuir um valor a el
 type variableName = value;
 ````
  Onde type é um dos tipos de Java (como `int` ou `String`), e variableName é o nome da variável (como **x** ou **name** ). O sinal de igual é usado para atribuir valores à variável.  
- Para criar uma variável que deve armazenar texto, veja a seguir:
+ Para criar uma variável que deve armazenar texto:
  Crie uma variável chamada **name** do tipo `String` e atribua a ela o valor " igor ":
 ```` java
 String name = "igor";
 System.out.println(name);
 ````
 
- Para criar uma variável que deve armazenar numero inteiro, veja a seguir:
+ Para criar uma variável que deve armazenar numero inteiro:
  Crie uma variável chamada **myNum** do tipo `int` e atribua a ela o valor **15**:
 ```` java
 int myNum = 15;
@@ -82,7 +81,7 @@ myNum = 20;  // myNum agora é 20
 System.out.println(myNum);
 ````
 #### variaveis finais
-No entanto, você pode adicionar a palavra-chave `fiunal` se não quiser que outros (ou você mesmo) substituam os valores existentes (isso declarará a variável como "final" ou "constante", o que significa imutável e somente leitura):
+ para declarar variaveis como constante usamos a `final` (isso declarará a variável como "final" ou "constante", o que significa não conseguimos mudar o valor usando somente para leitura):
 ```` java
 final int myNum = 15;
 myNum = 20;  // irá gerar um erro: não é possível atribuir um valor a uma variável final
@@ -871,49 +870,258 @@ public class Main {
 }
 ````
 
-## metodos em java
+# métodos em java
+ metodos em java são como funções que podem receber ou nao parametros
+## criar um método
+ um método deve ser chamado dentro de uma classe, é definido como nome seguido de parênteses **()** o java ja fornece alguns metodos prontos mas podemos criar os nossos metodos
 ```` java
+public class Main {
+  static void myMethod() {
+    // codigo a ser executado
+  }
+}
 ````
+* o `myMetod()` é o nome
+* o `static` significa que o método pertence a classe Main mas não é um objeto da classe Main
+* e o `void` indica que esse metodo não tem um `return`
+
+## chamar um metodos
+ para chamar um metodo usamos o nome do metodo junto com os parenteses **()** e um ; no final da linha
 
 ```` java
+public class Main {
+  static void myMethod() {
+    System.out.println("codigo execultado");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+
+// mostra "codigo executado"
 ````
+ para chamar mais de uma vez o metodo é so repetir o processo
+```` java
+public class Main {
+  static void myMethod() {
+    System.out.println("codigo execultado");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+    myMethod();
+    myMethod();
+  }
+}
+````
+
+## passando parametros para um metodo
+ os parametros são chamados dentro do parenteses do metodo e precisamos informar o tipo dele por exemplo `String`
 
 ```` java
+public class Main {
+  static void myMethod(String fname) {
+    System.out.println(fname + " silva");
+  }
+
+  public static void main(String[] args) {
+    myMethod("Igor");
+    myMethod("Gustavo");
+    myMethod("Ana");
+  }
+}
+// Igor silva
+// Gustavo silva
+// Ana silva
 ````
+## passando varios parametros
+ podemos tambem passar outros parametros para isso basta separar com uma virgula
+```` java
+public class Main {
+  static void myMethod(String fname, int age) {
+    System.out.println(fname + " is " + age);
+  }
+
+  public static void main(String[] args) {
+    myMethod("Gustavo", 7);
+    myMethod("Igor", 16);
+    myMethod("Lucia", 38);
+  }
+}
+
+// Gustavo is 7
+// Igor is 16
+// Lucia is 38
+````
+## retornar valores
+ ao usar a palavra `void` falamos que o metodo não deve retornar encontrada
+ se quisermos retornar algo podemos usar algum tido de dado como `char` ou `int` no lugar de `void` e usar o `return`
+```` java
+public class Main {
+  static int myMethod(int x) {
+    return 5 + x;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(myMethod(3));
+  }
+}
+// mostra 8
+````
+ o exemplo a seguir retorna a soma dos dois parametros passados
+```` java
+public class Main {
+  static int myMethod(int x, int y) {
+    return x + y;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(myMethod(5, 3));
+  }
+}
+//mostra 8
+````
+podemos tambem guardar o valor numa variavel
+```` java
+public class Main {
+  static int myMethod(int x, int y) {
+    return x + y;
+  }
+
+  public static void main(String[] args) {
+    int z = myMethod(5, 3);
+    System.out.println(z);
+  }
+}
+// mostra 8
+````
+ também podemos usar o `if else` dentro de um metodo
+```` java
+public class Main {
+
+  // cria o metodo checkAge
+  static void checkAge(int age) {
+
+    // se a age for menor que 18 mostra voce não é de maior
+    if (age < 18) {
+      System.out.println("você não é de maior");
+
+    //se a age for maior que 18 mostra voce é de maior
+    } else {
+      System.out.println("você é de maior");
+    }
+
+  }
+
+  public static void main(String[] args) {
+    checkAge(20); // chama checkAge e passa 20 como idade
+  }
+}
+
+// mostra o voce é de maior
+````
+## Method Overloading
+ isso permite que muitos metodos podem ter o mesmo nome mas com paremetros diferentes
+```` java
+static int plusMethodInt(int x, int y) {
+  return x + y;
+}
+
+static double plusMethodDouble(double x, double y) {
+  return x + y;
+}
+
+public static void main(String[] args) {
+  int myNum1 = plusMethodInt(8, 5);
+  double myNum2 = plusMethodDouble(4.3, 6.26);
+  System.out.println("int: " + myNum1);
+  System.out.println("double: " + myNum2);
+}
+````
+ ao inves de definir dois metodos que façam a mesma coisa fazemos um **overloading** em apenas um.
+ no exemplo acima fazemos um overloading no `plusMerhod` que funciona tanto para `int` quanto para `double`
+
+## escopo em java
+ em java as variaveis são acessiveis apenas onde foram criadas 
+ variaveis que são declaradas dentro de metodos so podem ser acessadas dentro dele nas linhas abaixo dela por exemplo:
+```` java
+public class Main {
+  public static void main(String[] args) {
+
+    // não podemos usar a variavel X aqui
+
+    int x = 100;
+
+    // aqui podemos usar a variavel X 
+    System.out.println(x);
+  } 
+}
+````
+ os blocos de codigos são o codigo dentro de chaves `{}`. quando uma variavel é declarada dentro do bloco não conseguimos usar ela fora dele nem antes da linha onde ela foi criada
+```` java
+public class Main {
+  public static void main(String[] args) {
+
+    // não podemos usar a variavel X aqui
+
+    { //bloco de codigo começa aqui
+
+     // não podemos usar a variavel X aqui
+
+
+      int x = 100;
+
+      // aqui podemos usar a variavel X 
+      System.out.println(x);
+
+   } // bloco de codigo termina aqui
+
+  //não podemos usar a variavel X aqui
+
+  }
+}
+````
+## recursividade 
+ recursividade é uma função que chama ela mesma 
+ no exemplo usamos a recursividade para adicionar um intervalo de numeros 
 
 ```` java
+public class Main {
+  public static void main(String[] args) {
+    int result = sum(10);
+    System.out.println(result);
+  }
+  public static int sum(int k) {
+    if (k > 0) {
+      return k + sum(k - 1);
+    } else {
+      return 0;
+    }
+  }
+}
 ````
+ no exemplo quando a função `sum()` é chamada ela adiciona o parametro `k` e retorna o resultado quando k é igual a zero e so para de chamar ela mesma quando k é zero
 
+### condição de parada 
+ as funções recursivas podem apresentar poblema de recursão infinita(quando a função nunca pra de se chamar) 
+ no exemplo abaixo para de chamar a ela mesma quando `end` é menor que `start`
 ```` java
+public class Main {
+  public static void main(String[] args) {
+    int result = sum(5, 10);
+    System.out.println(result);
+  }
+  public static int sum(int start, int end) {
+    if (end > start) {
+      return end + sum(start, end - 1);
+    } else {
+      return end;
+    }
+  }
+}
 ````
-
-```` java
-````
-
-```` java
-````
-
-```` java
-````
-
-```` java
-````
-
-```` java
-````
-
-```` java
-````
-
-```` java
-````
-
-```` java
-````
-
-```` java
-````
-
+# java poo
 ```` java
 ````
 
